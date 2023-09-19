@@ -1,6 +1,6 @@
 /*
-Author: Maria Cruz
-Date: Current Date
+Author: Vivian Nguyen
+Date: Sep 18 2023
 File Name: styles.css
 */
 
@@ -23,6 +23,28 @@ img {
 }
 
 /* Style rules for mobile viewport */
+.mobile-nav a {
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    text-decoration: none;
+    padding: 3%;
+    display: block;
+}
+.mobile-nav a.menu-icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.menu-icon div {
+    height: 50px;
+    width: 50px;
+    background-color: #373684;
+}
+#menu-links .tab-desk {
+    display: none;
+}
 
 /* Hide tab-desk class */
 .tab-desk {
@@ -39,6 +61,9 @@ header {
 header h1 {
     font-family: 'DM Serif Display', serif;
     font-style: italic;
+    font-size: 1.5em;
+    padding: 4%;
+    margin-right: 15%;
 }
 
 /* Style rules for navigation area */
@@ -51,19 +76,6 @@ nav ul {
     text-align: center;
 }
 
-nav li {
-    display: block;
-    font-size: 2em;
-    border-top: 1px solid #e5e9fc;
-}
-
-nav li a {
-    display: block;
-    color: #fff;
-    text-align: center;
-    padding: 0.5em 1em;
-    text-decoration: none;
-}
 
 /* Style rules for main content */
 main {
@@ -228,6 +240,9 @@ footer a {
 /* Media Query for Tablet Viewport */
 @media screen and (min-width: 550px), print {
     
+    .mobile-nav mobile {
+        display: none;
+    }
     /* Tablet Viewport: Show tab-desk class, hide mobile class */
     .tab-desk {
         display: block;
@@ -238,11 +253,20 @@ footer a {
     }
     
     /* Tablet Viewport: Style rule for header content */
+    header h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 2em;
+    }
     span.tab-desk {
         display: inline;
     }
     
     /* Tablet Viewport: Style rules for nav area */
+    nav ul {
+    list-style-type: none;
+    text-align: center;
+}
     nav li {
         border-top: none;
         display: inline-block;
@@ -256,6 +280,10 @@ footer a {
     
     nav li a {
         padding: 0.25em 0.5em;
+        display: block;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
     }
     
     .grid {
@@ -298,6 +326,7 @@ footer a {
     nav li a:hover {
         color: #373684;
         background-color: #e5e9fc;
+        transform: scale(1.2);
     }
     
     /* Desktop Viewport: Style Rules for main content */  
